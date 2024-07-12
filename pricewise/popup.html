@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PriceWise Comparison</title>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <h1>PriceWise Comparison</h1>
+  <div id="currentProduct">
+    <h2>Current Product</h2>
+    <div id="productInfo"></div>
+    <button id="addProduct">Add to Tracking</button>
+  </div>
+  <div id="trackedProducts">
+    <h2>Tracked Products</h2>
+    <ul id="productList"></ul>
+  </div>
+  <div id="priceHistory">
+    <h2>Price History</h2>
+    <canvas id="priceChart"></canvas>
+  </div>
+  <script src="popup.js"></script>
+  <script src="chart.js"></script>
+</body>
+</html>

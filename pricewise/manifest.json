@@ -1,0 +1,35 @@
+{
+  "manifest_version": 3,
+  "name": "PriceWise Comparison",
+  "version": "1.0",
+  "description": "Compare prices across multiple websites, track price changes, and find the best deals",
+  "permissions": ["storage", "activeTab", "alarms", "notifications"],
+  "host_permissions": ["<all_urls>"],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "images/icon16.png",
+      "48": "images/icon48.png",
+      "128": "images/icon128.png"
+    }
+    
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ],
+  "options_page": "options.html",
+  "icons": {
+    "16": "images/icon16.png",
+    "48": "images/icon48.png",
+    "128": "images/icon128.png"
+  },
+  "content_security_policy": {
+    "script-src": "'self' https://cdn.jsdelivr.net/npm/chart.js",
+    "object-src": "'self'"
+  }} 
